@@ -66,7 +66,6 @@ def create_connection():
     conn = None
     try:
         conn = sqlite3.connect(r"db\blog.db")
-        print(sqlite3.version)
     except Error as e:
         print(e)
 

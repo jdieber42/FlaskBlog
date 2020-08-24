@@ -3,3 +3,4 @@ __pycache__/forms.cpython-37.pyc
 # Bundler
 .idea/*
 venv/*
+db/blog.db
