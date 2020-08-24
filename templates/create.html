@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="sub-title">
+    <h2>Create Blog Post</h2>
+    <a href="/blogs"><i class="icon-home"></i></a>
+</div>
+
+<div class="col-md-12 content-page">
+<div class="col-md-12 blog-post">
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.title.label }}<br>
+            {{ form.title(size=50) }}
+        </p>
+        <p>
+            {{ form.author.label }}<br>
+            {{ form.author(size=30) }}
+        </p>
+        <p>
+            {{ form.text.label }}<br>
+            {{ form.text(rows='5',cols='80') }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+</div>
+</div>
+{% endblock %}

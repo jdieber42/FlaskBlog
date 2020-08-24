@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="sub-title">
+    <a href="/blogs" title="Go to Home Page"><h2>Back Home</h2></a>
+    <a href="/delete/{{post.id}}"><i class="icon-minus"></i></a>
+</div>
+
+<div class="col-md-12 content-page">
+<div class="col-md-12 blog-post">
+
+    <!-- Post Headline Start -->
+    <div class="post-title">
+        <h1>{{post.title}}</h1>
+    </div>
+    <!-- Post Headline End -->
+
+    <!-- Post Detail Start -->
+    <div class="post-info">
+        <span>{{post.blog_date}} / by <a href="#" target="_blank">{{post.author}}</a></span>
+    </div>
+    <!-- Post Detail End -->
+
+    <p>{{post.text}}</p>
+</div>
+</div>
+{% endblock %}

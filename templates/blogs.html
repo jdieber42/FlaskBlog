@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="sub-title">
+    <h2>Flask Blog Example</h2>
+    <a href="/create"><i class="icon-plus"></i></a>
+    <!-- a href="mailto:j.dieber@dieber-software-consulting.co.at"><i class="icon-envelope"></i></a-->
+ </div>
+<div class="col-md-12 content-page">
+    {% for post in posts %}
+    <div class="col-md-12 blog-post">
+        <div class="post-title">
+          <a href="/blog/{{post.id}}"><h1>{{post.title}}</h1></a>
+        </div>
+        <div class="post-info">
+            <span>{{post.blog_date}} / by <a href="#" target="_blank">{{post.author}}</a></span>
+        </div>
+        <p>{{post.text}}</p>
+        <a href="/blog/{{post.id}}" class="button button-style button-anim fa fa-long-arrow-right"><span>Read More</span></a>
+    </div>
+    {% endfor %}
+
+    <div class="col-md-12 text-center">
+     <a href="javascript:void(0)" id="load-more-post" class="load-more-button">Load</a>
+     <div id="post-end-message"></div>
+    </div>
+ </div>
+{% endblock %}
