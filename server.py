@@ -1,8 +1,9 @@
 import sqlite3
 from sqlite3 import Error
-from flask import Flask, render_template, redirect, request, flash
+
+from flask import Flask, render_template, redirect
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, BooleanField, TextAreaField
+from wtforms import StringField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
 
 app = Flask(__name__)
